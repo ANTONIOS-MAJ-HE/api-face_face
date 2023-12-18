@@ -11,3 +11,5 @@ PyJWT==2.8.0
 pytz==2023.3.post1
 sqlparse==0.4.4
 tzdata==2023.3
+psycopg2
+psycopg2-binary
