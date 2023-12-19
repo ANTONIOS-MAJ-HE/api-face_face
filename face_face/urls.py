@@ -13,6 +13,7 @@ router.register(r'cursos', views.CursoViewSet)
 router.register(r'alumno', views.AlumnoViewSet)
 router.register(r'InscripcionCurso', views.InscripcionCursoViewSet)
 router.register(r'SesionCurso', views.SesionCursoViewSet)
+router.register(r'Asistencia', views.AsistenciaViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
