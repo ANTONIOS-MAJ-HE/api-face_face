@@ -42,6 +42,8 @@ class DocenteSerializer(serializers.ModelSerializer):
         return docente
 
 class CursoSerializer(serializers.ModelSerializer):
+    docente = DocenteSerializer(read_only=True)
+    
     class Meta:
         model = Curso
         fields = ['imagen', 'nombre', 'docente', 'ciclo']
@@ -57,11 +59,16 @@ class InscripcionCursoSerializer(serializers.ModelSerializer):
         fields = ['alumno', 'curso', 'fecha_inscripcion']
 
 class SesionCursoSerializer(serializers.ModelSerializer):
+    curso = CursoSerializer(read_only=True)
+    
     class Meta:
         model = SesionCurso
         fields = ['curso', 'fecha', 'tema', 'contenido']
 
 class AsistenciaSerializer(serializers.ModelSerializer):
+    sesion_curso = SesionCursoSerializer(read_only=True)
+    alumno = AlumnoSerializer(read_only=True)
+    
     class Meta:
         model = Asistencia
         fields = ['sesion_curso', 'alumno', 'estado_asistencia']
