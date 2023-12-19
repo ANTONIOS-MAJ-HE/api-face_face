@@ -44,7 +44,7 @@ class DocenteSerializer(serializers.ModelSerializer):
 class CursoSerializer(serializers.ModelSerializer):
     class Meta:
         model = Curso
-        fields = ['nombre', 'docente', 'ciclo']
+        fields = ['imagen', 'nombre', 'docente', 'ciclo']
 
 class AlumnoSerializer(serializers.ModelSerializer):
     class Meta:
