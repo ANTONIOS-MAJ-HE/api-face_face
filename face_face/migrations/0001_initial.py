@@ -39,7 +39,7 @@ class Migration(migrations.Migration):
                 ('imagen', models.ImageField(upload_to='imagenes_cursos/')),
                 ('nombre', models.CharField(max_length=100)),
                 ('ciclo', models.CharField(max_length=10)),
-                ('docente', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='face_face.docente')),
+                ('docente', models.ForeignKey(max_length=10)),
             ],
         ),
         migrations.CreateModel(
