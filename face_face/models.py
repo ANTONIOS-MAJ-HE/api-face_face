@@ -12,7 +12,7 @@ class Docente(models.Model):
 class Curso(models.Model):
     imagen = models.ImageField(upload_to='imagenes_cursos/')
     nombre = models.CharField(max_length=100)
-    docente = models.ForeignKey(Docente, on_delete=models.CASCADE)
+    docente = models.CharField(max_length=100)
     ciclo = models.CharField(max_length=10)
 
 # Modelo de Alumno
