@@ -42,7 +42,6 @@ class DocenteSerializer(serializers.ModelSerializer):
         return docente
 
 class CursoSerializer(serializers.ModelSerializer):
-    docente = DocenteSerializer(read_only=True)
     
     class Meta:
         model = Curso
