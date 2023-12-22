@@ -39,7 +39,7 @@ class Migration(migrations.Migration):
                 ('imagen', models.ImageField(upload_to='imagenes_cursos/')),
                 ('nombre', models.CharField(max_length=100)),
                 ('ciclo', models.CharField(max_length=10)),
-                ('docente', models.ForeignKey(max_length=10)),
+                ('docente', models.CharField(max_length=10)),
             ],
         ),
         migrations.CreateModel(
